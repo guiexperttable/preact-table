@@ -9,7 +9,7 @@ import {
 } from "@guiexpert/table";
 import { GeCheckboxEventFn, GeModelChangeEventFn, GeMouseEventFn, GeTableReadyEventFn } from "@guiexpert/react-table";
 
-export interface PreactTableProps {
+export interface GuiexpertTableProps {
   tableModel: TableModelIf,
   tableOptions?: TableOptions,
   mouseMoved?: GeMouseEventFn,
@@ -23,24 +23,24 @@ export interface PreactTableProps {
 }
 
 
-export class PreactTable extends Component {
+export class GuiexpertTable extends Component {
 
   ref = createRef();
 
-  constructor(props: PreactTableProps) {
+  constructor(props: GuiexpertTableProps) {
     super(props);
   }
 
   componentDidMount() {
     let myContainer: HTMLDivElement = this.ref.current;
     console.info("myContainer", myContainer);
-    this.initTable(myContainer, this.props as PreactTableProps);
+    this.initTable(myContainer, this.props as GuiexpertTableProps);
   }
 
   componentWillUnmount() {
   }
 
-  initTable(ele: HTMLDivElement, props: PreactTableProps) {
+  initTable(ele: HTMLDivElement, props: GuiexpertTableProps) {
     const listener = {
       onCheckboxChanged: (evt: any[]) => {
         if (props.checkboxChanged) {
@@ -108,4 +108,4 @@ export class PreactTable extends Component {
   }
 }
 
-export default PreactTable;
+export default GuiexpertTable;

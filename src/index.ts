@@ -1,2 +1,2 @@
-export * from "./PreactTable";
+export * from "./GuiexpertTable";
 export * from "./ComponentRendererWrapper";
