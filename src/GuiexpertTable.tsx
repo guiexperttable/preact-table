@@ -32,8 +32,7 @@ export class GuiexpertTable extends Component {
   }
 
   componentDidMount() {
-    let myContainer: HTMLDivElement = this.ref.current;
-    console.info("myContainer", myContainer);
+    const myContainer: HTMLDivElement = this.ref.current;
     this.initTable(myContainer, this.props as GuiexpertTableProps);
   }
 
